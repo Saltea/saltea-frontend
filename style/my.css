@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+
+@font-face {
+  font-family: 'Black Tie';
+  src: url('/fonts/BlackTie-Light-webfont.eot?v=1.0.0');
+  src: url('/fonts/BlackTie-Light-webfont.eot?#iefix&v=1.0.0') format('embedded-opentype'), url('/fonts/BlackTie-Light-webfont.woff2?v=1.0.0') format('woff2'), url('/fonts/BlackTie-Light-webfont.woff?v=1.0.0') format('woff'), url('/fonts/BlackTie-Light-webfont.ttf?v=1.0.0') format('truetype'), url('/fonts/BlackTie-Light-webfont.svg?v=1.0.0#black_tielight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'James';
+  src: url('/fonts/JamesFajardo.eot');
+  src: url('/fonts/JamesFajardo.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/JamesFajardo.woff') format('woff'),
+       url('/fonts/JamesFajardo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  /* padding: 0px 15px 15px 15px; */
+}
+
+button:hover {
+  background-color: rgb(189, 164, 168);
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  text-shadow: 0 0 0;
+  font-family: 'Karla', sans-serif !important;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+body {
+  background: #e6ddde;
+  font-family: 'Inconsolata', sans-serif !important;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  margin: 0;
+}
+
+p {
+  font-family: 'Inconsolata', sans-serif !important;
+  font-style: normal;
+  margin: 0 0 10px;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.88);
+  text-decoration: none;
+}
+
+::selection {
+  background: #916a70;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}

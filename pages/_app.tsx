@@ -1,17 +1,19 @@
-import * as React from "react";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { Hydrate } from "react-query/hydration";
-import { ReactQueryDevtools } from "react-query/devtools";
+import { HeadTag } from '../components/index';
+import { Layout } from '../components/index'
+// import '../lib/owl.carousel.min.js';
 
-const queryClient = new QueryClient();
+// import '../style/index.css';
+import '../style/swiper.min.css';
+import '../style/my.css';
+// import 'swiper/css/swiper.css'
 
-export default function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Hydrate state={pageProps.dehydratedState}>
+    <>
+      <HeadTag />
+      <Layout>
         <Component {...pageProps} />
-      </Hydrate>
-      <ReactQueryDevtools />
-    </QueryClientProvider>
-  );
+      </Layout>
+    </>
+  )
 }

@@ -1,49 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import { MenuWrap } from '../MenuWrap';
+import { MyHeader, Footer } from "../index";
+import {  
+  GlobalContainer,
+  GlobalWrap,
+  GreyBg
+} from '../../style/layout';
 
 export const Layout = ({ children }) => {
+  const [showMenu, setMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setMenu(!showMenu);
+  }
+
+  const hideMenu = () => {
+    setMenu(false);
+  }
+
   return (
-    <main>
-      {children}
-      <style jsx global>{`
-        * {
-          font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono",
-            "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New",
-            monospace, serif;
-        }
-        body {
-          margin: 0;
-          padding: 25px 50px;
-        }
-        a {
-          color: #22bad9;
-        }
-        p {
-          font-size: 14px;
-          line-height: 24px;
-        }
-        article {
-          margin: 0 auto;
-          max-width: 650px;
-        }
-        button {
-          align-items: center;
-          background-color: #22bad9;
-          border: 0;
-          color: white;
-          display: flex;
-          padding: 5px 7px;
-          transition: background-color 0.3s;
-        }
-        button:active {
-          background-color: #1b9db7;
-        }
-        button:disabled {
-          background-color: #b5bebf;
-        }
-        button:focus {
-          outline: none;
-        }
-      `}</style>
-    </main>
+    <GlobalContainer className={showMenu ? 'showMenu' : ''}>
+      <MenuWrap 
+        showMenu={showMenu}
+        hideMenu={hideMenu}
+      />
+      <GreyBg className={showMenu ? 'showMenu' : ''} onClick={hideMenu}/>
+      <GlobalWrap className={showMenu ? 'showMenu' : ''}>
+        <MyHeader 
+          toggleMenu={toggleMenu}
+        />
+        {children}
+        {/* <Footer /> */}
+      </GlobalWrap>
+  </GlobalContainer>
   );
 };
